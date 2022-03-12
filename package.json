@@ -1,0 +1,28 @@
+{
+  "name": "webshop-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulus1111/webshop-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulus1111/webshop-api/issues"
+  },
+  "homepage": "https://github.com/paulus1111/webshop-api#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
