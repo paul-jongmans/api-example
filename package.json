@@ -1,5 +1,5 @@
 {
-    "name": "webshop-api",
+    "name": "api-example",
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
@@ -15,14 +15,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/paulus1111/webshop-api.git"
+        "url": "git+https://github.com/paulus1111/api-example.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/paulus1111/webshop-api/issues"
+        "url": "https://github.com/paulus1111/api-example/issues"
     },
-    "homepage": "https://github.com/paulus1111/webshop-api#readme",
+    "homepage": "https://github.com/paulus1111/api-example#readme",
     "dependencies": {
         "cors": "^2.8.5",
         "express": "^4.17.3",
