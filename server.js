@@ -3,14 +3,11 @@ const app = require('./app');
 const config = require('./config');
 
 const gracefulShutdown = (msg) => {
-    ora().succeed('Shutdown initiated: ' + msg);
-    ora().succeed('Shutting down...');
+    ora().info('Shutdown initiated: ' + msg);
+    ora().info('Shutting down...');
 
     process.exit();
 };
-
-const statusMessageBackend = ora('Loading backend').start();
-const statusMessageDatabase = ora('Loading database').start();
 
 app.listen(3000, () => {
     process.on('SIGTERM', gracefulShutdown); // Handle kill commands
@@ -18,8 +15,14 @@ app.listen(3000, () => {
     process.on('uncaughtException', gracefulShutdown); // Prevent dirty exit on uncaught exceptions
     process.on('unhandledRejection', gracefulShutdown); // Prevent dirty exit on unhandled promise rejection
 
-    statusMessageBackend.succeed('Backend started on port ' + config.port);
+    //if (error) {
+    //    ora().fail('Database connection error');
+    //    return gracefulShutdown('Database connection error');
+    //}
+    
+    ora().succeed('Database connected');
+    ora().succeed('Backend started on port ' + config.port);
 }).on('error', (error) => {
-    statusMessageBackend.fail('Backend failed to start (' + error.message + ')');
+    ora().fail('Backend failed to start (' + error.message + ')');
     process.exit();
 });
