@@ -15,14 +15,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/paulus1111/api-example.git"
+        "url": "git+https://github.com/paul-jongmans/api-example.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/paulus1111/api-example/issues"
+        "url": "https://github.com/paul-jongmans/api-example/issues"
     },
-    "homepage": "https://github.com/paulus1111/api-example#readme",
+    "homepage": "https://github.com/paul-jongmans/api-example#readme",
     "dependencies": {
         "cors": "^2.8.5",
         "express": "^4.17.3",
