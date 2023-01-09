@@ -9,7 +9,7 @@ const gracefulShutdown = (msg) => {
     process.exit();
 };
 
-app.listen(3000, () => {
+app.listen(config.port, () => {
     process.on('SIGTERM', gracefulShutdown); // Handle kill commands
     process.on('SIGINT', gracefulShutdown); // Handle interrupts
     process.on('uncaughtException', gracefulShutdown); // Prevent dirty exit on uncaught exceptions
