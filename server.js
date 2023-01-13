@@ -16,13 +16,13 @@ app.listen(config.port, () => {
     process.on('unhandledRejection', gracefulShutdown); // Prevent dirty exit on unhandled promise rejection
 
     //if (error) {
-    //    ora().fail('Database connection error');
-    //    return gracefulShutdown('Database connection error');
+    //    ora().fail('Database failed to connect (' + error.message + ')');
+    //    return gracefulShutdown('Database failed to connect (' + error.message + ')');
     //}
     
     ora().succeed('Database connected');
     ora().succeed('Backend started on port ' + config.port);
 }).on('error', (error) => {
     ora().fail('Backend failed to start (' + error.message + ')');
-    process.exit();
+    return gracefulShutdown('Backend failed to start (' + error.message + ')');
 });
